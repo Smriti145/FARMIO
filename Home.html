@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Media Queries for Responsive Design */
+    @media (min-width: 768px) {
+        nav ul {
+            flex-direction: row;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .product-container {
+            padding: 1em;
+        }
+
+        .logo-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .site-name {
+            text-align: center;
+        }
+
+        .add-to-cart {
+            font-size: 16px;
+        }
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Farm_prod.html"> <img src="FarmIO.png" alt="Website Logo" class="logo"></a>
+                <a href="Farm_prod.html"><h1 class="site-name">FARMIO</h1></a>
+            </div>
+            <ul>
+                <li><a href="Farm_prod.html">Home</a></li>
+                <li><a href="Farm_prod.html">Farm Products</a></li>
+                <li><a href="Cust_ser.html">Customer Service</a></li>
+                <li><a href="Cont_us.html">Contact Us</a></li>
+                <li><a href="Index.html">My Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+    <main>
+        <section class="product-container">
+            <h2>Farm Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Tomatoes.jpg" alt="Product 1">
+                    <h3>Organic Tomatoes</h3>
+                    <p>INR5.00/kg</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Carrot.jpg" alt="Product 2">
+                    <h3>Fresh Carrots</h3>
+                    <p>INR3.00/kg</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Eggs.jpg" alt="Product 3">
+                    <h3>Free Range Eggs</h3>
+                    <p>INR2.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Banana.jpg" alt="Product 4">
+                    <h3>Raw bananas</h3>
+                    <p>INR4.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="potato.jpg" alt="Product 5">
+                    <h3>Potato</h3>
+                    <p>INR7.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>    
+                <div class="product-card">
+                    <img src="Spinach.jpg" alt="Product 6">
+                    <h3>Fresh Spinach</h3>
+                    <p>INR9.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>    
+            </div>
+        </section>    </main>
+    
+    <script>
+        // Simulate a user login status. Change this to true to simulate a logged-in user.
+        let isUserLoggedIn = false;
+
+        // Function to handle add to cart click
+        function handleAddToCart() {
+            if (!isUserLoggedIn) {
+                // If the user is not logged in, redirect to the customer login page.
+                alert('Please log in or register to add products to your cart.');
+                window.location.href = 'Cust_Log.html';
+            } else {
+                // Logic to add the product to the cart would go here.
+                alert('Product added to cart!');
+            }
+        }
+
+        // Add event listeners to all "Add to Cart" buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', handleAddToCart);
+        });
+    </script>
+</body>
+</html>

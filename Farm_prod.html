@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FARMIO | Farm Products</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #166d6d;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: #e8ebed;
+            text-decoration: none;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .site-name {
+            color: #e8ebed;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .product-container {
+            background-color: #fff;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .product-card h3 {
+            margin-top: 0;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        .add-to-cart {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .add-to-cart:hover {
+            background-color: #23527c;
+        } */
+
+        /* Media Queries for Responsive Design */
+        @media (min-width: 768px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav li {
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-container {
+                padding: 1em;
+            }
+
+            .logo-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            .site-name {
+                text-align: center;
+            }
+
+            .add-to-cart {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Farm_prod.html"> <img src="FarmIO.png" alt="Website Logo" class="logo"></a>
+                <a href="Farm_prod.html"><h1 class="site-name">FARMIO</h1></a>
+            </div>
+            <ul>
+                <li><a href="Farm_prod.html">Home</a></li>
+                <li><a href="Farm_prod.html">Farm Products</a></li>
+                <li><a href="Cust_ser.html">Customer Service</a></li>
+                <li><a href="Cont_us.html">Contact Us</a></li>
+                <li><a href="Index.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-container">
+            <h2>Farm Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Tomatoes.jpg" alt="Product 1">
+                    <h3>Organic Tomatoes</h3>
+                    <p>INR5.00/kg</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Carrot.jpg" alt="Product 2">
+                    <h3>Fresh Carrots</h3>
+                    <p>INR3.00/kg</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Eggs.jpg" alt="Product 3">
+                    <h3>Free Range Eggs</h3>
+                    <p>INR2.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Banana.jpg" alt="Product 4">
+                    <h3>Raw bananas</h3>
+                    <p>INR4.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="potato.jpg" alt="Product 5">
+                    <h3>Potato</h3>
+                    <p>INR7.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>    
+                <div class="product-card">
+                    <img src="Spinach.jpg" alt="Product 6">
+                    <h3>Fresh Spinach</h3>
+                    <p>INR9.00/dozen</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>    
+            </div>
+        </section>
+
+         <!-- Cart Section -->
+         <section class="cart-container">
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items"></div>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </section>
+    </main>
+    <script >
+        // Array to store cart items
+let cart = [];
+
+// Function to add a product to the cart
+function addToCart(productName, price, button) {
+    // Create a cart item object
+    const cartItem = {
+        name: productName,
+        price: price,
+        quantity: 1,
+    };
+
+    // Check if the item already exists in the cart
+    const existingItem = cart.find(item => item.name === productName);
+    if (existingItem) {
+        existingItem.quantity += 1; // If the item exists, increase the quantity
+    } else {
+        cart.push(cartItem); // Add new item to the cart
+    }
+
+    // Update the cart display
+    displayCart();
+
+    // Change button text and style
+    button.innerText = 'Added!';
+    button.style.backgroundColor = '#4CAF50'; // Change color to green
+    button.style.transform = 'scale(1.1)';
+
+    setTimeout(() => {
+        button.innerText = 'Add to Cart';
+        button.style.backgroundColor = '';
+        button.style.transform = 'scale(1)';
+    }, 1500); // Revert after 1.5 seconds
+}
+
+// Function to display cart items in the cart section
+function displayCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Clear the existing cart display
+
+    // Loop through the cart items and create HTML for each item
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <p>${item.name} - INR${item.price.toFixed(2)} x ${item.quantity}</p>
+            <button class="remove-item" data-product="${item.name}">Remove</button>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+
+    // Add event listeners to remove buttons
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function() {
+            const productName = this.getAttribute('data-product');
+            removeFromCart(productName);
+        });
+    });
+}
+
+// Function to remove an item from the cart
+function removeFromCart(productName) {
+    cart = cart.filter(item => item.name !== productName);
+    displayCart();
+}
+
+// Function to handle checkout button click
+document.getElementById('checkout-btn').addEventListener('click', function() {
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+    } else {
+        alert('Proceeding to checkout...');
+        // You can add checkout logic here or redirect to a checkout page
+    }
+});
+// Function to handle checkout button click
+document.getElementById('checkout-btn').addEventListener('click', function() {
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+    } else {
+        // Store cart details in localStorage for access on the checkout page
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // Redirect to the checkout page
+        window.location.href = 'checkout.html';
+    }
+});
+
+
+// Add event listeners to "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        const productCard = button.parentElement;
+        const productName = productCard.querySelector('h3').innerText;
+        const priceText = productCard.querySelector('p').innerText;
+        const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+        addToCart(productName, price, button);
+    });
+});
+    </script>
+
+
+</body>
+</html>

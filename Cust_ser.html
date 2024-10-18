@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMIO | Customer Service</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #166d6d;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ccc;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .customer-service-container {
+            background-color: #fff;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .customer-service-container h2 {
+            margin-top: 0;
+        }
+
+        .customer-service-container p {
+            margin-bottom: 20px;
+        }
+
+        .customer-service-container a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        .customer-service-container a:hover {
+            color: #23527c;
+        }
+
+        .logout-button {
+            background-color: #dc3545; /* Bootstrap danger color for logout */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            margin-top: 20px; /* Space above the button */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+
+        .logout-button:hover {
+            background-color: #c82333; /* Darker red on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .logout-button:focus {
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); /* Add a subtle shadow for accessibility */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Farm_prod.html"><img src="FarmIO.png" alt="Website Logo" class="logo"></a>
+                <a href="Farm_prod.html"><h1 class="site-name">FARMIO</h1></a>
+            </div>
+            <ul>
+                <li><a href="Farm_prod.html">Home</a></li>
+                <li><a href="Farm_prod.html">Farm Products</a></li>
+                <li><a href="Cust_ser.html">Customer Service</a></li>
+                <li><a href="Cont_us.html">Contact Us</a></li>
+                <li><a href="Index.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="customer-service-container">
+            <h2>Customer Service</h2>
+            <p>Need help with your order? Contact us at <a href="mailto:support@FARMIO.com">support@FARMIO.com</a> or call us at (1800-327-6373)</p>
+            <p>We're here to help with any questions or concerns you may have.</p>
+        </section>
+        
+        <section class="about-container">
+            <h2>About Us</h2>
+            <p>We believe in building strong relationships with our customers and providing exceptional customer service.</p>
+        </section>
+
+        <!-- Log Out Button -->
+        <button class="logout-button" onclick="window.location.href='index.html'">Log Out</button>
+    </main>
+</body>
+</html>

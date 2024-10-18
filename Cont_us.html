@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMIO | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #166d6d;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ccc;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .contact-container {
+            background-color: #fff;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-container h2 {
+            margin-top: 0;
+        }
+
+        .contact-container p {
+            margin-bottom: 20px;
+        }
+
+        .contact-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-container button {
+            background-color: #337ab7; /* Primary button color */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 15px; /* Button padding */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .contact-container button:hover {
+            background-color: #23527c; /* Darker blue on hover */
+        }
+
+        .logout-button {
+            background-color: #dc3545; /* Red color for logout */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            margin-top: 20px; /* Space above the button */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+
+        .logout-button:hover {
+            background-color: #c82333; /* Darker red on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Farm_prod.html"><img src="FarmIO.png" alt="Website Logo" class="logo"></a>
+                <a href="Farm_prod.html"><h1 class="site-name">FARMIO</h1></a>
+            </div>
+            <ul>
+                <li><a href="Farm_prod.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us using the form below or by calling us at (1800-327-6373)</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </section>
+        
+       ss
+    </main>
+</body>
+</html>

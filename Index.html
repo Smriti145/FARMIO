@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMIO | Login</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+    background-color: #166d6d;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 2px solid #4a8484;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.site-name {
+    font-size: 40px;
+    color: #e9d6d6;
+}
+
+            
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        nav li {
+            margin-right: 20px;
+        }
+        
+        nav a {
+            color: #e8ebed;
+            text-decoration: none;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+        
+        .login-container {
+            background-color: #fff;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .role-select {
+            margin-bottom: 20px;
+        }
+        
+        .role-select input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .login-form {
+            display: none;
+        }
+        
+        .login-form h2 {
+            margin-top: 0;
+        }
+        
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        .login-form button[type="submit"] {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .login-form button[type="submit"]:hover {
+            background-color: #23527c;
+        }
+        
+        footer {
+            background-color: #f0f0f0;
+            padding: 1em;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Farm_prod.html"> <img src="FarmIO.png" alt="Website Logo" class="logo"></a>
+                <a href="Farm_prod.html"><h1 class="site-name">FARMIO</h1></a>
+            </div>
+            <ul>
+                <li><a href="Farm_prod.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login-container">
+            <h1>Login</h1>
+            <p>Please select your role:</p>
+            <div class="role-select">
+                <input type="radio" id="farmer" name="role" value="farmer">
+                <label for="farmer">Farmer</label>
+                <input type="radio" id="customer" name="role" value="customer">
+                <label for="customer">Customer</label>
+            </div>
+            <button id="next-btn">Next</button>
+            <div class="login-form" style="display: none;">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 . All rights reserved.</p>
+    </footer>
+    <script >
+        const nextBtn = document.getElementById('next-btn');
+const loginForm = document.querySelector('.login-form');
+const roleSelect = document.querySelector('.role-select');
+
+nextBtn.addEventListener('click', () => {
+    const role = roleSelect.querySelector('input[name="role"]:checked').value;
+    if (role === 'farmer') {
+        // Redirect to farmer login page
+        window.location.href = 'Farm_Log.html';
+    } else if (role === 'customer') {
+        // Redirect to customer login page
+        window.location.href = 'Cust_Log.html';
+    }
+});
+    </script>
+       
+    
+</body>
+</html>

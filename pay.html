@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .confirmation-container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-details {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been placed successfully.</p>
+        
+        <div class="order-details">
+            <h2>Order Summary</h2>
+            <div class="order-item">
+                <span>Fresh Apples</span>
+                <span>INR 150 x 2</span>
+            </div>
+            <div class="order-item">
+                <span>Organic Carrots</span>
+                <span>INR 80 x 1</span>
+            </div>
+            <div class="order-item">
+                <strong>Total:</strong>
+                <strong>INR 380</strong>
+            </div>
+        </div>
+
+        <p>Your order will be shipped to your provided address.</p>
+        <button onclick="goHome()">Return to Homepage</button>
+    </div>
+
+    <script>
+    function goHome() {
+        window.location.href = 'Farm_prod.html'; // Replace with your homepage URL
+    }    
+    </script>
+</body>
+</html>

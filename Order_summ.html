@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary & Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+
+        #order-summary, #upsell, #payment-options {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .product-suggestion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-suggestion img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .product-suggestion p {
+            margin: 0;
+            flex: 1;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        #order-total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="order-items">
+            <li class="order-item">
+                <span>Fresh Apples</span>
+                <span>INR 150 x 2</span>
+            </li>
+            <li class="order-item">
+                <span>Organic Carrots</span>
+                <span>INR 80 x 1</span>
+            </li>
+        </ul>
+        <p><strong>Total:</strong> <span id="order-total">INR 380</span></p>
+        <button onclick="editCart()">Edit Cart</button>
+        <form id="shipping-info">
+            <h3>Shipping Information</h3>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Postal Code" required>
+            <input type="text" placeholder="Phone Number" required>
+            <button type="submit">Continue to Payment</button>
+        </form>
+    </div>
+
+    <div id="upsell">
+        <h2>You Might Also Like</h2>
+        <div class="product-suggestion">
+            <img src="basket.jpg" alt="Basket">
+            <p>Matching Basket - 10% Off</p>
+            <button onclick="addToCart('Matching Basket', 50)">Add to Cart</button>
+        </div>
+        <div class="product-suggestion">
+            <img src="fertilizer.jpg" alt="Organic Fertilizer">
+            <p>Organic Fertilizer - 20% Off</p>
+            <button onclick="addToCart('Organic Fertilizer', 100)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="payment-options">
+        <h2>Select Payment Method</h2>
+        <form id="payment-form">
+            <label>
+                <input type="radio" name="payment-method" value="credit-card" required>
+                Credit/Debit Card
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="google-pay">
+                Google Pay
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="cash-on-delivery">
+                Cash on Delivery
+            </label><br>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <script >function editCart() {
+        alert('Redirecting to cart page...');
+        window.location.href = 'Farm_prod.html'; // Replace with your cart page URL
+    }
+    
+    document.getElementById('shipping-info').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Shipping information saved! Proceeding to payment...');
+        document.getElementById('payment-options').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    function addToCart(item, price) {
+        alert(`${item} added to cart for INR${price}!`);
+        // Logic to update cart details can go here
+    }
+    
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const selectedMethod = document.querySelector('input[name="payment-method"]:checked').value;
+        alert(`You have selected: ${selectedMethod}. Proceeding to payment gateway...`);
+        window.location.href = 'pay.html'; // Replace with your confirmation page URL
+    });    </script>
+</body>
+</html>
